@@ -6,11 +6,40 @@ import { ChevronDown, Github, Linkedin, Mail, Download, Code, Sparkles, Zap } fr
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [greetText, setGreetText] = useState('');
+  const [greetIndex, setGreetIndex] = useState(0);
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.3,
     triggerOnce: false
   });
+
+  const languagesGreet = [
+    "Hello",
+    "Hola",
+    "Bonjour",
+    "Ciao",
+    "Zdravstvuyte",
+  ];
+
+  useEffect(() => {
+      const currentGreet = languagesGreet[greetIndex];
+      let index = 0;
+      setGreetText('');
+  
+    const timer = setInterval(() => {
+      setGreetText(currentGreet.slice(0, index));
+      index++;
+      if(index > currentGreet.length) {
+        clearInterval(timer);
+        setTimeout(() => {
+          setGreetIndex((prev) => (prev + 1) % languagesGreet.length);
+        },1500);
+      }
+    },100);
+
+    return () => clearInterval(timer);
+  }, [greetIndex]);
 
   const titles = [
     "Full Stack Developer",
@@ -168,7 +197,7 @@ const Hero = () => {
             <Sparkles className="text-gray-600 h-5 w-5" />
           </motion.div>
           <span className="text-gray-700 text-lg font-medium tracking-wide">
-            Hello, I'm
+            {greetText}, I'm
           </span>
         </motion.div>
 
@@ -231,8 +260,10 @@ const Hero = () => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
-          <motion.button
-            className="group bg-gray-800 text-white px-8 py-3 rounded-lg font-medium text-base hover:bg-gray-700 transition-all duration-300 shadow-lg"
+          <motion.a
+            href='/My_Resume__Final_SDE.pdf'
+            download
+            className="group bg-gray-800 text-white px-8 py-3 rounded-lg font-medium text-base hover:bg-gray-700 transition-all duration-300 shadow-lg pointer:cursor"
             whileHover={{ 
               scale: 1.05,
               boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)"
@@ -243,7 +274,7 @@ const Hero = () => {
               <Download size={18} />
               Download Resume
             </span>
-          </motion.button>
+          </motion.a>
           
           <motion.button
             className="group border-2 border-gray-700 text-gray-700 px-8 py-3 rounded-lg font-medium text-base hover:bg-gray-700 hover:text-white transition-all duration-300"
