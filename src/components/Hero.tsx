@@ -296,13 +296,15 @@ const Hero = () => {
           className="flex justify-center space-x-6 mb-16"
         >
           {[
-            { icon: Github, href: "#", color: "hover:text-gray-800" },
-            { icon: Linkedin, href: "#", color: "hover:text-blue-600" },
-            { icon: Mail, href: "#", color: "hover:text-red-500" },
+            { icon: Github, href: "https://github.com/SanskarAgrahari-07", color: "hover:text-gray-800" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/sanskar-kumar-agrahari-895877257/", color: "hover:text-blue-600" },
+            { icon: Mail, href: "https://mail.google.com/mail/u/0/#inbox", color: "hover:text-red-500" },
           ].map(({ icon: Icon, href, color }, index) => (
             <motion.a
               key={index}
               href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`p-3 rounded-full bg-white shadow-md text-gray-600 ${color} transition-all duration-300 border border-gray-200`}
               whileHover={{ 
                 scale: 1.1, 

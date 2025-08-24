@@ -85,7 +85,7 @@ const About = () => {
                   className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium border border-gray-300"
                   initial={{ opacity: 0, scale: 0 }}
                   animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0 }}
                   whileHover={{ scale: 1.1, boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)" }}
                 >
                   {tech}
@@ -129,8 +129,8 @@ const About = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { icon: Coffee, number: "500+", label: "Cups of Coffee", color: "text-amber-600" },
-            { icon: Code, number: "50+", label: "Projects Built", color: "text-blue-600" },
+            { icon: Coffee, number: "100+", label: "Cups of Coffee", color: "text-amber-600" },
+            { icon: Code, number: "20+", label: "Projects Built", color: "text-blue-600" },
             { icon: Heart, number: "100%", label: "Passion Level", color: "text-red-500" },
             { icon: Cpu, number: "24/7", label: "Learning Mode", color: "text-green-600" }
           ].map((stat, index) => (
@@ -139,7 +139,7 @@ const About = () => {
               className="text-center p-4 bg-gray-50 rounded-lg border border-gray-200 shadow-sm"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
-              transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+              transition={{ duration: 0.6 }}
               whileHover={{ scale: 1.05 }}
             >
               <stat.icon className={`h-8 w-8 ${stat.color} mx-auto mb-2`} />

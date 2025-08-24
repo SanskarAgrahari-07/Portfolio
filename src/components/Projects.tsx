@@ -23,8 +23,7 @@ const Projects = () => {
       title: "College Club Management System",
       description:
         "A full-stack MERN web application to streamline club and event management on campus. Includes secure user authentication, role-based access for mentors, office bearers, and students, event creation and tracking, member interactions, and an intuitive dashboard for efficient administration.",
-      image:
-        "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg",
+      image:"/club.png",
       technologies: ["MongoDB", "Express.js", "React", "Node.js"],
       githubUrl: "#",
       liveUrl: "#",
@@ -35,7 +34,8 @@ const Projects = () => {
       title: "Routing and Scalability Enhancements in Mobile Ad Hoc Networks",
       description:
         "Analyzed the performance of MANET routing protocols (DSR, AODV, OLSR, DSDV) using NS-3 simulation. Identified DSR as the most efficient for high data transmission rates in diverse environments. Performed protocol analysis based on packet receive rates and scalability.",
-      image: "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg",
+      // image: "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg",
+      image:"/manet-_-mobile-ad-hoc-network.webp",
       technologies: ["NS-3", "C++", "Networking"],
       githubUrl: "#",
       liveUrl: "#",
@@ -47,8 +47,8 @@ const Projects = () => {
         "From Coins to FSMs: A User-Centric Vending Machine Design With Interactive UI",
       description:
         "Designed a vending machine prototype with five snack options of varying prices. Implemented Deterministic Finite Automata (DFA) for state control and built an interactive UI to visualize machine states using HTML, CSS, and JavaScript.",
-      image: "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg",
-      technologies: ["HTML", "CSS", "JavaScript, FSA"],
+      image: "/toc.gif",
+      technologies: ["HTML", "CSS", "JavaScript", "FSA"],
       githubUrl: "#",
       liveUrl: "#",
       icon: Cog,
@@ -60,7 +60,7 @@ const Projects = () => {
       description:
         "Built an ML model to classify viva transcripts into questions, answers, and statements. Achieved the highest accuracy and F1-score using CatBoost with BERT embeddings. Automated transcript labeling to support consistent analysis and educational feedback.",
       image:
-        "https://images.pexels.com/photos/3184644/pexels-photo-3184644.jpeg",
+        "/NLP-Interview-Questions.webp",
       technologies: ["Python", "BERT", "CatBoost", "Scikit-learn"],
       githubUrl: "#",
       liveUrl: "#",
@@ -73,7 +73,7 @@ const Projects = () => {
       description:
         "Developed a real-time sentiment analysis system using Kafka to monitor social media streams. Built a web application for instant sentiment prediction on user-submitted tweets, used MongoDB for scalable storage, and ensured low-latency, high-speed predictions.",
       image:
-        "https://images.pexels.com/photos/2674473/pexels-photo-2674473.jpeg",
+        "/social.webp",
       technologies: ["Python", "Kafka", "MongoDB", "Flask", "React"],
       githubUrl: "#",
       liveUrl: "#",

@@ -91,8 +91,8 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", color: "hover:text-gray-800" },
-    { icon: Linkedin, href: "#", color: "hover:text-blue-600" },
+    { icon: Github, href: "https://github.com/SanskarAgrahari-07", color: "hover:text-gray-800" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/sanskar-kumar-agrahari-895877257/", color: "hover:text-blue-600" },
     { icon: Twitter, href: "#", color: "hover:text-blue-400" }
   ];
 
@@ -155,6 +155,8 @@ const Contact = () => {
                   <motion.a
                     key={index}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`p-3 bg-white rounded-lg text-gray-600 ${social.color} transition-colors duration-300 border border-gray-200 shadow-sm`}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.9 }}
