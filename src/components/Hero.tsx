@@ -153,7 +153,7 @@ const Hero = () => {
         />
 
         {/* Floating Dots */}
-        {[...Array(20)].map((_, i) => (
+        {/* {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute bg-gray-600 rounded-full opacity-40"
@@ -175,7 +175,7 @@ const Hero = () => {
               delay: Math.random() * 2,
             }}
           />
-        ))}
+        ))} */}
       </div>
 
       <motion.div
